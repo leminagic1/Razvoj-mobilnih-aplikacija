@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/nazivET"
+            android:layout_width="380dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:hint="Naziv biljke" />
+
+        <EditText
+            android:id="@+id/porodicaET"
+            android:layout_width="381dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/nazivET"
+            android:layout_marginTop="4dp"
+            android:hint="Porodica" />
+
+        <EditText
+            android:id="@+id/medicinskoUpozorenjeET"
+            android:layout_width="380dp"
+            android:layout_height="57dp"
+            android:layout_below="@id/porodicaET"
+            android:layout_marginTop="4dp"
+            android:hint="Medicinsko upozorenje" />
+
+        <EditText
+            android:id="@+id/jeloET"
+            android:layout_width="380dp"
+            android:layout_height="68dp"
+            android:layout_below="@id/medicinskoUpozorenjeET"
+            android:layout_marginTop="-6dp"
+            android:hint="Jelo" />
+
+
+
+        <ListView
+            android:id="@+id/medicinskaKoristLV"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/jeloET"
+            android:layout_marginTop="5dp"
+            android:nestedScrollingEnabled="true"
+
+
+            android:background="@drawable/listview_border"
+            android:choiceMode="multipleChoice" />
+
+        <ListView
+            android:id="@+id/klimatskiTipLV"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:nestedScrollingEnabled="true"
+            android:layout_below="@id/medicinskaKoristLV"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/listview_border"
+            android:choiceMode="multipleChoice"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/zemljisniTipLV"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/klimatskiTipLV"
+            android:layout_marginTop="16dp"
+            android:choiceMode="multipleChoice"
+            android:background="@drawable/listview_border"
+            android:nestedScrollingEnabled="true" />
+
+        <ListView
+            android:id="@+id/profilOkusaLV"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:nestedScrollingEnabled="true"
+            android:layout_below="@id/zemljisniTipLV"
+            android:layout_marginTop="16dp"
+            android:choiceMode="singleChoice"
+            android:background="@drawable/listview_border"/>
+
+        <ListView
+            android:id="@+id/jelaLV"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/profilOkusaLV"
+            android:nestedScrollingEnabled="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/listview_border"/>
+
+        <Button
+            android:id="@+id/dodajJeloBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jelaLV"
+            android:layout_marginTop="16dp"
+            android:text="Dodaj jelo"/>
+
+        <Button
+            android:id="@+id/dodajBiljkuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dodajJeloBtn"
+            android:layout_marginTop="16dp"
+            android:focusableInTouchMode="true"
+            android:text="Dodaj biljku" />
+
+        <Button
+            android:id="@+id/uslikajBiljkuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dodajBiljkuBtn"
+            android:layout_marginTop="16dp"
+            android:text="Uslikaj biljku"/>
+
+        <ImageView
+            android:id="@+id/slikaIV"
+            android:layout_width="157dp"
+            android:layout_height="140dp"
+            android:layout_below="@id/uslikajBiljkuBtn"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

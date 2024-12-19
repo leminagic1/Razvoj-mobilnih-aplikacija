@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modes_array">
+        <item>Medicinski</item>
+        <item>Kuharski</item>
+        <item>Botanicki</item>
+    </string-array>
+    <string-array name="boje_array">
+        <item>red</item>
+        <item>blue</item>
+        <item>yellow</item>
+        <item>orange</item>
+        <item>purple</item>
+        <item>brown</item>
+        <item>green</item>
+    </string-array>
+</resources>
